@@ -4,7 +4,7 @@ int n,tieuchuan;
 void reset(vector<bool> &vs){
     fill(vs.begin(),vs.end(),false);
 }
-void bfs(int i,vector<vector<int>> ar,vector<bool> &vs,int n){
+void bfs(int i,vector<vector<int>> &ar,vector<bool> &vs,int n){
     vs[i]=true;
     queue<int> st;
     st.push(i);
@@ -19,7 +19,7 @@ void bfs(int i,vector<vector<int>> ar,vector<bool> &vs,int n){
         }
     }
 }
-int sotplt(int i,vector<vector<int>> ar,vector<bool> &vs,int n){
+int sotplt(vector<vector<int>> &ar,vector<bool> &vs,int n){
     int kq=0;
         for(int i=1;i<=n;i++){
             if(!vs[i]){
@@ -44,11 +44,11 @@ int main(){
             tieuchuan+=1;
         }
     }
-    reset(vs);
     for(int i=1;i<=n;i++){
-        vs[i]=true;
-        int temp=sotplt(i,ar,vs,n);
-        if(temp>tieuchuan) cout<<i<<" ";
         reset(vs);
+        vs[i]=true;
+        int temp=sotplt(ar,vs,n);
+        if(temp>tieuchuan) cout<<i<<" ";
+        
     }
 }
