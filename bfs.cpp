@@ -26,5 +26,5 @@ int main(){
             cin>>ar[i][j];
         }
     }
-    bfs(1,ar,vs,n);
+    bfs(5,ar,vs,n);
 }

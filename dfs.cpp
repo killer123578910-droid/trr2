@@ -19,6 +19,6 @@ int main(){
             cin>>ar[i][j];
         }
     }
-    dfs(1);
+    dfs(5);
     return 0;
 }

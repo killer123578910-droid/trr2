@@ -3,10 +3,18 @@ using namespace std;
 int n,k;
 void dfs(int i,vector<vector<int>> &ar,vector<int> &vs){
     vs[i]=1;
-    for(int j=1;j<=n;j++){
-        if(ar[i][j]&&!vs[j]){
-            cout<<min(i,j)<<" "<<max(i,j)<<endl;
-            dfs(j,ar,vs);
+    stack<int> st;
+    st.push(i);
+    while(!st.empty()){
+        int top=st.top();st.pop();
+        for(int j=1;j<=n;j++){
+            if(ar[top][j]&&!vs[j]){
+                cout<<min(top,j)<<" "<<max(top,j)<<endl;
+                st.push(top);
+                st.push(j);
+                vs[j]=1;
+                break;
+            }
         }
     }
 }
@@ -37,10 +45,10 @@ int main(){
             cin >> ar[i][j];
         }
     }
-    cout<<"DFS tree:"<<endl;
+    cout<<"Stack DFS tree:"<<endl;
     dfs(k,ar,vs);
     fill(vs.begin(),vs.end(),0);
-    cout<<"BFS tree:"<<endl;
+    cout<<"Queue BFS tree:"<<endl;
     bfs(k,ar,vs);
     return 0;
 }
