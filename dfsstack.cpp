@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int n;
-void dfs(int i,vector<vector<int>> ar,vector<bool> &vs,int n){
+void dfs(int i,vector<vector<int>> &ar,vector<bool> &vs,int n){
     vs[i]=true;
     stack<int> st;
     st.push(i);
