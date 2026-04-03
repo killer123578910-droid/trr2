@@ -17,6 +17,10 @@ void dijktrs(vector<vector<pair<int,int>>> &ar,vector<int>&dh,vector<int> &used,
                 flag=1;
             }
         }
+        if(miin==INT_MAX){
+            break;
+        }
+        used[chot]=1;
         for(auto x:ar[chot]){
             int dich=x.first;int tt=x.second;
             if(!used[dich]&&dh[dich]>dh[chot]+tt){
@@ -30,9 +34,10 @@ void dijktrs(vector<vector<pair<int,int>>> &ar,vector<int>&dh,vector<int> &used,
 
 int main(){
     cin>>n>>u;
-    vector<vector<pair<int,int>>> ar;
+    vector<vector<pair<int,int>>> ar(n+1);
     vector<int> dh(n+1,INT_MAX);
-    vector<int> parent(n+1),used(n+1,0);
+    vector<int> parent(n+1,0);
+    vector<int> used(n+1,0);
     for(int i=1;i<=n;i++){
         for(int j=1;j<=n;j++){
             int x;
@@ -43,6 +48,22 @@ int main(){
         }
     }
     dijktrs(ar,dh,used,parent);
+    for(int i=1;i<=n;i++){
+        cout<<"K/c "<<u<<" <- "<<i<<" = "<<(dh[i]==INT_MAX?"INF":to_string(dh[i]))<<";  ";
+        if(dh[i]==INT_MAX) cout<<endl;
+        else{
+        int tmp=i;
+        if(i==u){
+            cout<<i<<" <- "<<u<<endl;
+        }else{  
+            while(tmp!=u){
+                cout<<tmp<<" <- ";
+                tmp=parent[tmp];
+        }
+            cout<<u<<endl;
+        }
+    }
+    }
 
     return 0;
 }
