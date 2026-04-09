@@ -1,0 +1,1 @@
+{"name":"Chu_Trinh_Euler_01","url":"https://code.ptit.edu.vn/student/question/V0FWcTIwZ0JhN2x2eE5HNW1Oemcvdz09","tests":[{"input":"1\n4 4\n1 2\n1 4\n2 4\n3 4","output":"2","id":1775550136370},{"id":1775550136371,"input":"2\n4 4 2\n1 2\n1 4\n2 3\n3 4","output":"2 1 4 3 2"}],"srcPath":"d:\\trr2\\Chu_Trinh_Euler_01.cpp"}
