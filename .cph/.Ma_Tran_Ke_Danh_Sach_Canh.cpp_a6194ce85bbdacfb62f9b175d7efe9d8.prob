@@ -1,1 +1,0 @@
-{"name":"Ma_Tran_Ke_Danh_Sach_Canh","url":"https://code.ptit.edu.vn/student/question/M1p5RGlwb1JkNUluTzJQVFM4R1BjUT09","tests":[{"input":"1\n4\n0 1 0 1\n1 0 1 0\n0 1 0 0\n1 0 0 0","output":"2 2 1 1","id":1775551511302},{"input":"2\n4\n0 1 0 1\n1 0 1 0\n0 1 0 0\n1 0 0 0","output":"4 3\n1 2\n1 4\n2 3","id":1775551511303}],"srcPath":"d:\\trr2\\Ma_Tran_Ke_Danh_Sach_Canh.cpp"}
