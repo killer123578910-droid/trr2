@@ -1,1 +1,0 @@
-{"name":"TRR1002_1_2_Do_Thi","url":"https://code.ptit.edu.vn/student/question/TRR1002","tests":[{"input":"1\n4\n0 1 0 1\n1 0 1 0\n0 1 0 0\n1 0 0 0","output":"2 2 1 1","id":1776589302124},{"id":1776589302125,"input":"2\n4\n0 1 0 1\n1 0 1 0\n0 1 0 0\n1 0 0 0","output":"4\n2 2 4\n2 1 3\n1 2\n1 1"}],"srcPath":"d:\\dh\\trr2\\TRR_1002_1_2_Do_Thi.cpp"}
