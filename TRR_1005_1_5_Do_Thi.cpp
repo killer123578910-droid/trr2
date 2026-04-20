@@ -6,12 +6,12 @@ int main(){
     ofstream out("DT.OUT");
     int t,n,m;
     in>>t>>n>>m;
-    vector<set<int>> ke(n+1);
+    vector<vector<int>> ke(n+1);
     for(int i=0;i<m;i++){
         int x,y;
         in>>x>>y;
-        ke[x].insert(y);
-        ke[y].insert(x);
+        ke[x].push_back(y);
+        ke[y].push_back(x);
     }
     if(t==1){
         for(int i=1;i<=n;i++){
@@ -20,15 +20,13 @@ int main(){
     }else{
         out<<n<<endl;
         for(int i=1;i<=n;i++){
-            for(int j=1;j<=n;j++){
-                if(ke[i].count(j)){
-                    out<<1<<" ";
-                }else{
-                    out<<0<<" ";
-                }
-            }
+            out<<ke[i].size()<<" ";
+            for(auto x:ke[i]) out<<x<<" ";
             out<<endl;
         }
+
+        out<<endl;
     }
+
     return 0;
 }
